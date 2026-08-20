@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import aboutImg from '../assets/about.png';
+import aboutImg from '../assets/about-black-blazer.jpg';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -113,7 +113,7 @@ export const AboutSection: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="lg:col-span-7 flex flex-col justify-center"
           >
-            {/* Cinematic Headline with Glow Flare */}
+            {/* Cinematic Headline */}
             <motion.div variants={fadeUpVariants} className="relative mb-6 select-none">
               <h2
                 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] tracking-tight uppercase leading-[0.88]"
@@ -128,70 +128,103 @@ export const AboutSection: React.FC = () => {
               </h2>
             </motion.div>
 
-            {/* Concise Bio Paragraph */}
+            {/* Bio */}
             <motion.p
               variants={fadeUpVariants}
               className="text-xs sm:text-sm md:text-[14.5px] font-light text-[#B3A497] leading-[1.85] tracking-wide mb-10 max-w-xl"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
-              I'm <span className="text-[#F3DBB3] font-medium">Damisetti Shamya Lohitha</span>, a Full Stack Developer and Data Science student specializing in building scalable web architectures, AI-integrated platforms, and refined digital experiences. With a strong algorithmic foundation and a focus on clean engineering, I turn complex requirements into impactful products.
+              I'm <span className="text-[#F3DBB3] font-medium">Vidhi Tiwari</span>, a Computer Science student and aspiring software engineer focused on AI, full-stack development, and problem solving. I build practical products that combine intelligent systems, clean interfaces, and reliable engineering — turning ideas into experiences that are useful, scalable, and built to make an impact.
             </motion.p>
 
-            {/* Concise 4-Item Achievement Metrics Grid */}
-            <motion.div 
+            {/* Four organized identity / achievement metrics */}
+            <motion.div
               variants={fadeUpVariants}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 pb-2 border-t border-[#8C6D4F]/25"
+              className="mt-10 w-full pt-7 pb-3 border-t border-[#8C6D4F]/25"
             >
-              {/* Stat 1 */}
-              <div className="flex flex-col">
-                <span 
-                  className="text-3xl sm:text-4xl font-light text-[#F4EBE2] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  1200+
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  DSA Solved
-                </span>
-              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 w-full">
+                {/* 01 — Academics */}
+                <div className="min-w-0 px-5 sm:px-6 lg:px-7 py-5 sm:py-6 border-r border-[#D4AF37]/20">
+                  <span className="block text-[8px] tracking-[0.3em] text-[#8C6D4F] mb-4">01</span>
+                  <span
+                    className="block text-[2.7rem] sm:text-[3.1rem] leading-none font-light text-[#D4AF37] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    8.78
+                  </span>
+                  <span className="block mt-3 text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-[#F4EBE2]">
+                    B.Tech CGPA
+                  </span>
+                  <span className="block mt-2 text-[9px] sm:text-[10px] leading-[1.5] text-[#95877C] max-w-[150px]">
+                    Consistent Academic Excellence
+                  </span>
+                </div>
 
-              {/* Stat 2 */}
-              <div className="flex flex-col">
-                <span 
-                  className="text-3xl sm:text-4xl font-light text-[#D4AF37] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  9.07
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  B.Tech CGPA
-                </span>
-              </div>
+                {/* 02 — Technical Focus */}
+                <div className="min-w-0 px-5 sm:px-6 lg:px-7 py-5 sm:py-6 border-r border-[#D4AF37]/20">
+                  <span className="block text-[8px] tracking-[0.3em] text-[#8C6D4F] mb-4">02</span>
+                  <span
+                    className="block text-[2rem] sm:text-[2.35rem] leading-[0.9] font-light text-[#F4EBE2] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    FULL STACK
+                  </span>
+                  <span
+                    className="block mt-1 text-[1.7rem] sm:text-[2rem] leading-[0.9] font-light text-[#D4AF37] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    + GEN AI
+                  </span>
+                  <span className="block mt-3 text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] uppercase text-[#A8988B]">
+                    Core Focus
+                  </span>
+                  <span className="block mt-2 text-[9px] sm:text-[10px] leading-[1.5] text-[#95877C]">
+                    AI / Web Applications
+                  </span>
+                </div>
 
-              {/* Stat 3 */}
-              <div className="flex flex-col">
-                <span 
-                  className="text-3xl sm:text-4xl font-light text-[#F4EBE2] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  40+
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  Industry-Grade Projects
-                </span>
-              </div>
+                {/* 03 — Athlete */}
+                <div className="min-w-0 px-5 sm:px-6 lg:px-7 py-5 sm:py-6 border-r border-[#D4AF37]/20">
+                  <span className="block text-[8px] tracking-[0.3em] text-[#8C6D4F] mb-4">03</span>
+                  <span
+                    className="block text-[1.95rem] sm:text-[2.3rem] leading-[0.9] font-light text-[#D4AF37] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    NATIONAL
+                  </span>
+                  <span
+                    className="block mt-1 text-[1.55rem] sm:text-[1.9rem] leading-[0.9] font-light text-[#F4EBE2] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    LEVEL ATHLETE
+                  </span>
+                  <span className="block mt-3 text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] uppercase text-[#A8988B]">
+                    Achievement
+                  </span>
+                  <span className="block mt-2 text-[9px] sm:text-[10px] leading-[1.5] text-[#95877C]">
+                    Basketball Player
+                  </span>
+                </div>
 
-              {/* Stat 4 */}
-              <div className="flex flex-col">
-                <span 
-                  className="text-3xl sm:text-4xl font-light text-[#D4AF37] tracking-tight"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  Top 100
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[#A8988B] mt-0.5">
-                  Myntra Hackerramp
-                </span>
+                {/* 04 — Leadership */}
+                <div className="min-w-0 px-5 sm:px-6 lg:px-7 py-5 sm:py-6">
+                  <span className="block text-[8px] tracking-[0.3em] text-[#8C6D4F] mb-4">04</span>
+                  <span
+                    className="block text-[1.95rem] sm:text-[2.3rem] leading-[0.9] font-light text-[#D4AF37] tracking-tight"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+                  >
+                    PRESIDENT
+                  </span>
+                  <span className="block mt-3 text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-[#F4EBE2]">
+                    Codec Club
+                  </span>
+                  <span className="block mt-2 text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] uppercase text-[#A8988B]">
+                    Leadership
+                  </span>
+                  <span className="block mt-2 text-[9px] sm:text-[10px] leading-[1.5] text-[#95877C] max-w-[155px]">
+                    Organized events &amp; led teams
+                  </span>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -199,15 +232,37 @@ export const AboutSection: React.FC = () => {
           {/* ================= RIGHT PORTRAIT FRAME (PERFECT LOCKED GEOMETRY) ================= */}
           <div className="lg:col-span-5 flex items-center justify-center relative perspective-[1400px]">
             
-            {/* Ambient Animated Gold Glow Ring Behind Frame */}
-            <motion.div 
+            {/* Strong cinematic gold aura — intentionally visible around the portrait */}
+            <motion.div
+              aria-hidden="true"
               animate={{
-                scale: isCardHovered ? 1.15 : 1,
-                opacity: isCardHovered ? 0.35 : 0.15,
-                rotate: isCardHovered ? 180 : 0
+                opacity: [0.48, 0.78, 0.48],
+                scale: [1, 1.035, 1],
               }}
-              transition={{ duration: 3, ease: "easeOut" }}
-              className="absolute -inset-6 bg-[conic-gradient(from_0deg,#D4AF37_0%,#8C6D4F_30%,transparent_60%,#D4AF37_100%)] blur-2xl rounded-3xl pointer-events-none"
+              transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -inset-10 z-0 rounded-[2rem] bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.38)_0%,rgba(212,175,55,0.20)_34%,rgba(212,175,55,0.08)_56%,transparent_76%)] blur-[28px] pointer-events-none"
+            />
+
+            {/* Focused gold light on the left/right edges of the frame */}
+            <motion.div
+              aria-hidden="true"
+              animate={{ opacity: [0.45, 0.95, 0.45] }}
+              transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -inset-4 z-0 rounded-xl border border-[#D4AF37]/45 shadow-[0_0_18px_rgba(212,175,55,0.55),0_0_55px_rgba(212,175,55,0.30),inset_0_0_20px_rgba(212,175,55,0.10)] pointer-events-none"
+            />
+
+            {/* Vertical cinematic light streaks */}
+            <motion.div
+              aria-hidden="true"
+              animate={{ opacity: [0.15, 0.55, 0.15] }}
+              transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -left-7 top-[10%] h-[80%] w-5 z-0 rounded-full bg-[#D4AF37]/35 blur-[18px] pointer-events-none"
+            />
+            <motion.div
+              aria-hidden="true"
+              animate={{ opacity: [0.18, 0.65, 0.18] }}
+              transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+              className="absolute -right-7 top-[10%] h-[80%] w-5 z-0 rounded-full bg-[#D4AF37]/40 blur-[18px] pointer-events-none"
             />
 
             {/* Drifting Gold Spark Embers on Hover */}
@@ -239,7 +294,7 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative p-3.5 border border-[#8C6D4F]/40 rounded-sm bg-[#120F0C]/80 backdrop-blur-xl shadow-[0_25px_70px_rgba(0,0,0,0.95)] cursor-pointer group transition-colors duration-500 hover:border-[#D4AF37]/80"
+              className="relative z-10 p-3.5 border border-[#D4AF37]/55 rounded-sm bg-[#120F0C]/90 backdrop-blur-xl shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_24px_rgba(212,175,55,0.28),0_0_70px_rgba(212,175,55,0.14)] cursor-pointer group transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_34px_rgba(212,175,55,0.45),0_0_90px_rgba(212,175,55,0.22)]"
             >
               {/* Dynamic Laser Border Pulse on Card Perimeter */}
               <div className="absolute inset-0 rounded-sm pointer-events-none overflow-hidden">
@@ -252,10 +307,10 @@ export const AboutSection: React.FC = () => {
 
               {/* Locked Corner Gold Accent Brackets */}
               <div className="pointer-events-none">
-                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#D4AF37] transition-transform duration-500 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 shadow-[0_0_10px_rgba(212,175,55,0.4)]" />
-                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#D4AF37] transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shadow-[0_0_10px_rgba(212,175,55,0.4)]" />
-                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#D4AF37] transition-transform duration-500 group-hover:-translate-x-0.5 group-hover:translate-y-0.5 shadow-[0_0_10px_rgba(212,175,55,0.4)]" />
-                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#D4AF37] transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5 shadow-[0_0_10px_rgba(212,175,55,0.4)]" />
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#D4AF37] transition-transform duration-500 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 shadow-[0_0_16px_rgba(212,175,55,0.75)]" />
+                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#D4AF37] transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shadow-[0_0_16px_rgba(212,175,55,0.75)]" />
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#D4AF37] transition-transform duration-500 group-hover:-translate-x-0.5 group-hover:translate-y-0.5 shadow-[0_0_16px_rgba(212,175,55,0.75)]" />
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#D4AF37] transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5 shadow-[0_0_16px_rgba(212,175,55,0.75)]" />
               </div>
 
               {/* Portrait Image Canvas */}
@@ -263,7 +318,7 @@ export const AboutSection: React.FC = () => {
                 {/* Main Portrait */}
                 <img
                   src={aboutImg}
-                  alt="Damisetti Shamya Lohitha"
+                  alt="Vidhi Tiwari"
                   className="w-full h-full object-cover object-top filter brightness-[0.94] contrast-[1.06] saturate-[1.02] group-hover:brightness-105 group-hover:contrast-[1.12] transition-all duration-700 ease-out"
                 />
 
@@ -285,7 +340,7 @@ export const AboutSection: React.FC = () => {
                     className="text-3xl text-[#F2D8A7] drop-shadow-[0_0_12px_rgba(242,216,167,0.5)] transition-colors duration-300 group-hover:text-white"
                     style={{ fontFamily: "'Herr Von Muellerhoff', cursive" }}
                   >
-                    Lohitha
+                    Vidhi
                   </span>
                 </div>
               </div>

@@ -8,19 +8,67 @@
   position: relative;
   width: 100%;
   padding-top: 4vh;
-  padding-bottom: 50vh; /* creates the runway so all cards stack and lock at the top */
+  padding-bottom: 55vh;
 }
 
+/*
+ * Native sticky stacking.
+ *
+ * There is deliberately no JavaScript transform animation here.
+ * The browser's layout engine handles the sticky positioning,
+ * which avoids wheel/touch differences and transform jitter.
+ */
 .scroll-stack-card {
-  position: relative;
+  position: sticky;
+  top: var(--scroll-stack-position, 15%);
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: var(--scroll-stack-item-distance, 80px);
+
+  /*
+   * Each following card gets a small offset through the
+   * nth-child rule below, creating the visual stack.
+   */
+  transform: none;
+  filter: none;
+  will-change: auto;
+  backface-visibility: visible;
   transform-origin: top center;
-  will-change: transform, filter;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+
+  /*
+   * Keep the card visually isolated without creating a
+   * continuously animated compositing layer.
+   */
+  contain: paint;
+}
+
+.scroll-stack-card:nth-child(1) {
+  z-index: 1;
+  top: var(--scroll-stack-position, 15%);
+}
+
+.scroll-stack-card:nth-child(2) {
+  z-index: 2;
+  top: calc(
+    var(--scroll-stack-position, 15%) +
+    var(--scroll-stack-distance, 32px)
+  );
+}
+
+.scroll-stack-card:nth-child(3) {
+  z-index: 3;
+  top: calc(
+    var(--scroll-stack-position, 15%) +
+    calc(var(--scroll-stack-distance, 32px) * 2)
+  );
+}
+
+.scroll-stack-card:nth-child(4) {
+  z-index: 4;
+  top: calc(
+    var(--scroll-stack-position, 15%) +
+    calc(var(--scroll-stack-distance, 32px) * 3)
+  );
 }
 
 .scroll-stack-end {

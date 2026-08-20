@@ -1,4 +1,3 @@
-// src/components/ExperienceSection.tsx
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -13,38 +12,43 @@ interface RouteStop {
 const journey: RouteStop[] = [
   {
     id: '01',
-    year: 'MAY - JUN 2026',
-    title: 'FULL STACK & MOBILE INTERN',
-    organization: 'TECHNICAL HUB PVT LTD',
-    description: 'Engineered cross-platform mobile and responsive web applications utilizing React Native and modern full-stack workflows.',
+    year: 'JUN - AUG 2026',
+    title: 'GENERATIVE AI INTERN',
+    organization: 'IBOTIX PVT. LTD.',
+    description:
+      'Worked on AI-powered application development, contributing to Generative AI workflows, document intelligence, OCR, Gemini AI integration, and backend API development.',
   },
   {
     id: '02',
-    year: '2026 MILESTONE',
-    title: 'TOP 100 NATIONAL TEAM',
-    organization: 'MYNTRA WEFORSHE HACKERRAMP',
-    description: 'Ranked among the Top 100 nationwide teams while maintaining Department Topper status (9.07 CGPA) in Data Science.',
+    year: 'JUN - AUG 2025',
+    title: 'FRONTEND DEVELOPER',
+    organization: 'IMPETUS TECHNOLOGIES',
+    description:
+      'Worked on frontend development, building responsive and interactive web interfaces and contributing to practical software development workflows.',
   },
   {
     id: '03',
-    year: 'MAY - JUN 2025',
-    title: 'FULL STACK TRAINEE',
-    organization: 'TECHNICAL HUB PVT LTD',
-    description: 'Trained in modern full-stack architecture, developing and deploying end-to-end interactive responsive web platforms.',
+    year: 'JUN - AUG 2024',
+    title: 'PYTHON AI/ML INTERN',
+    organization: 'SOARING AEROTECH PRIVATE LIMITED',
+    description:
+      'Worked on Python and AI/ML development, gaining hands-on experience with machine learning workflows, computer vision, and technical project development.',
   },
   {
     id: '04',
-    year: '2023 - 2027',
-    title: 'B.TECH IN DATA SCIENCE',
-    organization: 'ADITYA COLLEGE OF ENGINEERING',
-    description: 'Specializing in Machine Learning and System Design. Solved 1200+ algorithm challenges across LeetCode, CodeChef, and GeeksforGeeks.',
+    year: '2025 - 2026',
+    title: 'PRESIDENT',
+    organization: 'CODEC CLUB (SUAS)',
+    description:
+      'Led CODEC Club initiatives and coordinated major technical events including a 24-hour hackathon, gaming events, and a startup tech summit, while managing student teams and collaborating with faculty to execute events successfully.',
   },
   {
     id: '05',
-    year: '2021 - 2023',
-    title: 'HIGHER SECONDARY (MPC)',
-    organization: 'SRI CHAITANYA JUNIOR COLLEGE',
-    description: 'Completed specialized coursework in Mathematics, Physics, and Chemistry with 90.60% aggregate excellence.',
+    year: '2023 - 2024',
+    title: 'SPORTS HEAD',
+    organization: 'STUDENT COUNCIL (SUAS)',
+    description:
+      'Led and coordinated major student activities including the annual fest, sports functions, and cultural events, working with student teams to plan and execute events across the campus.',
   },
 ];
 
@@ -56,7 +60,11 @@ export const ExperienceSection: React.FC = () => {
     offset: ['start 70%', 'end 90%'],
   });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lineHeight = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['0%', '100%']
+  );
 
   return (
     <section
@@ -64,12 +72,9 @@ export const ExperienceSection: React.FC = () => {
       ref={containerRef}
       className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-4 pb-24 px-6 sm:px-12 lg:px-20 overflow-hidden"
     >
-      {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-[#D4AF37]/[0.03] rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto w-full relative z-10">
-        
-        {/* Eyebrow Header */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -83,10 +88,10 @@ export const ExperienceSection: React.FC = () => {
           >
             04 / EXPERIENCE
           </span>
+
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
 
-        {/* Section Headline */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,21 +104,18 @@ export const ExperienceSection: React.FC = () => {
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              EXPERIENCE &amp;
+              EXPERIENCE &
             </span>
+
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
               MILESTONES.
             </span>
           </h2>
         </motion.div>
 
-        {/* Minimalist Route Map */}
         <div className="relative w-full">
-          
-          {/* Background Track */}
           <div className="absolute left-[19px] md:left-[140px] top-4 bottom-8 w-[1px] bg-[#8C6D4F]/20" />
-          
-          {/* Animated Gold Track */}
+
           <motion.div
             style={{ height: lineHeight }}
             className="absolute left-[19px] md:left-[140px] top-4 w-[2px] bg-gradient-to-b from-[#D4AF37] via-[#C99E5D] to-[#8C6D4F]/10 shadow-[0_0_10px_#D4AF37] origin-top"
@@ -129,22 +131,19 @@ export const ExperienceSection: React.FC = () => {
                 transition={{ duration: 0.7, delay: idx * 0.08 }}
                 className="relative flex flex-col md:flex-row items-start group"
               >
-                {/* Desktop Year (Left side of track) */}
                 <div className="hidden md:block w-[140px] shrink-0 pr-8 pt-0.5 text-right">
                   <span className="text-[10px] font-mono tracking-[0.2em] text-[#8C6D4F] group-hover:text-[#D4AF37] transition-colors">
                     {stop.year}
                   </span>
                 </div>
 
-                {/* Route Node */}
                 <div className="absolute left-[19px] md:left-[140px] top-1.5 -translate-x-1/2 flex items-center justify-center">
                   <div className="absolute w-6 h-6 rounded-full border border-[#D4AF37]/0 group-hover:border-[#D4AF37]/40 group-hover:scale-150 transition-all duration-700 ease-out" />
+
                   <div className="w-2.5 h-2.5 rounded-full bg-[#120F0C] border border-[#8C6D4F] group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:shadow-[0_0_12px_#D4AF37] transition-colors duration-300" />
                 </div>
 
-                {/* Content (Right side of track) */}
                 <div className="ml-14 md:ml-12 pl-2">
-                  {/* Mobile Year */}
                   <div className="md:hidden mb-1.5">
                     <span className="text-[10px] font-mono tracking-[0.2em] text-[#D4AF37]">
                       {stop.year}
@@ -157,15 +156,15 @@ export const ExperienceSection: React.FC = () => {
                   >
                     {stop.title}
                   </h3>
-                  
-                  <span 
+
+                  <span
                     className="block text-[10px] font-medium tracking-[0.2em] uppercase text-[#8C6D4F] mb-2"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     {stop.organization}
                   </span>
-                  
-                  <p 
+
+                  <p
                     className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-[1.7] max-w-lg group-hover:text-[#D5CBC0] transition-colors"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
@@ -175,7 +174,6 @@ export const ExperienceSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

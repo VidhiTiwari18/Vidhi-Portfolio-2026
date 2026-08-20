@@ -15,97 +15,86 @@ interface Project {
 const projects: Project[] = [
   {
     number: '01',
-    title: 'PolicyGuard AI',
-    category: 'AI / LEGAL-TECH PLATFORM',
+    title: 'PromptBridge',
+    category: 'AI CONVERSATION CONTINUITY / FULL STACK',
     description:
-      'AI-powered platform engineered for automated privacy policy analysis and legal contract auditing across web, desktop, and mobile. Implements NLP extraction, real-time risk alert detection, and generative risk score intelligence.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'A full-stack SaaS platform with a Chrome extension that captures, summarizes, and transfers conversation context across AI chatbots such as ChatGPT, Claude, and Gemini — eliminating repetitive copy-pasting when switching between LLM platforms.',
+    githubUrl: '#',
     tech: [
-      'React.js',
-      'React Native',
-      'Electron.js',
+      'React',
       'Node.js',
-      'Express.js',
-      'MongoDB Atlas',
+      'PostgreSQL',
+      'Chrome Extension API',
       'OpenAI API',
-      'Prompt Eng',
-      'NLP',
-      'Docker',
-      'JWT',
+      'Claude API',
     ],
     metrics: [
-      { label: 'PLATFORMS', value: 'Web, Mobile, Desktop' },
-      { label: 'ENGINE', value: 'OpenAI NLP / GPT' },
-      { label: 'PIPELINE', value: 'Automated Scoring' },
+      { label: 'PLATFORM', value: 'SaaS + Chrome Extension' },
+      { label: 'USE CASE', value: 'Cross-LLM Context' },
+      { label: 'STACK', value: 'React + Node + PostgreSQL' },
     ],
   },
   {
     number: '02',
-    title: 'Software Release Risk Heatmap',
-    category: 'MACHINE LEARNING / DEV PLATFORM',
+    title: 'NagrikAI',
+    category: 'AI + FULL STACK / BUREAUCRACY ASSISTANT',
     description:
-      'Full-stack predictive release management platform utilizing Machine Learning. Implements a trained Random Forest classifier to categorize release stability from Low to Critical risk, rendered over a live interactive team heatmap.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'A full-stack AI platform that helps citizens navigate government procedures, understand documentation requirements, and get step-by-step assistance for services such as passports and certificates. It also uses OCR and AI-powered document understanding to process uploaded documents.',
+    githubUrl: 'https://github.com/VidhiTiwari18/NagrikAI-AI-Powered-Bureaucracy-Assistant',
     tech: [
-      'React.js',
-      'TypeScript',
+      'React',
       'Python',
       'FastAPI',
-      'scikit-learn',
-      'PostgreSQL',
-      'Tailwind CSS',
+      'EasyOCR',
+      'Gemini AI',
       'REST APIs',
-      'JWT',
     ],
     metrics: [
-      { label: 'MODEL', value: 'Random Forest' },
-      { label: 'ACCURACY', value: 'High Precision' },
-      { label: 'DASHBOARD', value: 'Live Risk Heatmap' },
+      { label: 'ASSISTANCE', value: 'Government Procedures' },
+      { label: 'DOCUMENT AI', value: 'OCR + Extraction' },
+      { label: 'FULL STACK', value: 'React + FastAPI' },
     ],
   },
   {
     number: '03',
-    title: 'Multi-Tenant SaaS Platform',
-    category: 'CLOUD / DISTRIBUTED SYSTEM',
+    title: 'Drone IVM',
+    category: 'CUSTOM-BUILT DRONE + COMPUTER VISION',
     description:
-      'Enterprise-grade multi-tenant platform built for unified management of teams, projects, and execution lifecycles. Architected with strict tenant data isolation, granular Role-Based Access Control (RBAC), and containerized deployments.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'A custom-assembled drone-based inventory management system combining hands-on UAV hardware integration with computer vision and full-stack software. The system brings together Pixhawk 2.4.8, GPS, Raspberry Pi, camera, and drone components with YOLOv5, OpenCV, Flask, and SQLite for inventory monitoring and item identification.',
+    githubUrl: 'https://github.com/VidhiTiwari18/drone-ivm-system',
     tech: [
-      'Node.js',
-      'Express.js',
-      'PostgreSQL',
-      'React',
-      'Docker',
-      'JWT',
-      'RBAC',
-      'REST APIs',
+      'Pixhawk 2.4.8',
+      'Raspberry Pi',
+      'YOLOv5',
+      'OpenCV',
+      'Barcode / QR',
+      'Flask',
+      'SQLite',
     ],
     metrics: [
-      { label: 'ARCHITECTURE', value: 'Multi-Tenant' },
-      { label: 'SECURITY', value: 'RBAC Isolation' },
-      { label: 'CONTAINERS', value: 'Docker Compose' },
+      { label: 'HARDWARE', value: 'Custom Drone Assembly' },
+      { label: 'FLIGHT CONTROL', value: 'Pixhawk 2.4.8 + GPS' },
+      { label: 'VISION', value: 'YOLOv5 + OpenCV' },
     ],
   },
   {
     number: '04',
-    title: 'Payment Gateway with Hosted Checkout',
-    category: 'FINTECH / PAYMENT SYSTEMS',
+    title: 'Vehicle Accident Detection',
+    category: 'COMPUTER VISION / IMAGE CLASSIFICATION',
     description:
-      'End-to-end hosted payment gateway infrastructure supporting seamless merchant order generation, multi-currency processing, and secure consumer checkout via UPI and Cards with webhook transaction verification.',
-    githubUrl: 'https://github.com/lohithadamisetti123',
+      'A computer vision model trained on approximately 1,000 labeled vehicle images to classify vehicles into accident and non-accident categories. The project uses a CNN-based image classification approach to identify accident-related vehicle conditions.',
+    githubUrl: '#',
     tech: [
-      'Node.js',
-      'Spring Boot',
-      'PostgreSQL',
-      'React',
-      'Docker',
-      'REST APIs',
-      'UPI / Card Integrations',
+      'Python',
+      'TensorFlow',
+      'Keras',
+      'CNN',
+      'OpenCV',
     ],
     metrics: [
-      { label: 'PROTOCOLS', value: 'UPI & Cards' },
-      { label: 'BACKEND', value: 'Spring Boot + Node' },
-      { label: 'DATABASE', value: 'ACID PostgreSQL' },
+      { label: 'DATASET', value: '~1,000 Images' },
+      { label: 'MODEL', value: 'CNN Image Classification' },
+      { label: 'ACCURACY', value: '90%' },
     ],
   },
 ];
@@ -163,7 +152,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#A8988B] max-w-sm mt-4 md:mt-0 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Scroll down to unfold the system architecture cards. Each platform was built to solve complex operational challenges.
+            Four selected builds spanning AI, full-stack engineering, browser extensions, and computer vision.
           </p>
         </motion.div>
 
@@ -180,7 +169,7 @@ export const ProjectsSection: React.FC = () => {
 >
           {projects.map((project) => (
             <ScrollStackItem key={project.title}>
-              <div className="relative w-full rounded-2xl border border-[#8C6D4F]/50 bg-[#0E0C0A] p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.98)] group overflow-hidden transition-colors duration-500 hover:border-[#D4AF37]">
+              <div className="relative w-full rounded-2xl border border-[#8C6D4F]/50 bg-[#0E0C0A] p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.98)] group overflow-hidden transition-colors duration-300 hover:border-[#D4AF37]">
                 
                 {/* Top Gold Border Light Flare */}
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/80 to-transparent" />
@@ -234,7 +223,7 @@ export const ProjectsSection: React.FC = () => {
                       {project.tech.map((t) => (
                         <span
                           key={t}
-                          className="px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#16120E] text-[#E8D7C5] group-hover:border-[#D4AF37]/50 transition-all duration-300"
+                          className="px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#16120E] text-[#E8D7C5] group-hover:border-[#D4AF37]/50 transition-colors duration-300"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {t}
@@ -265,13 +254,14 @@ export const ProjectsSection: React.FC = () => {
                     </div>
 
                     <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center space-x-3 px-6 py-3.5 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.24em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
+                      href={project.githubUrl === "#" ? undefined : project.githubUrl}
+                      target={project.githubUrl === "#" ? undefined : "_blank"}
+                      rel={project.githubUrl === "#" ? undefined : "noopener noreferrer"}
+                      onClick={project.githubUrl === "#" ? (e) => e.preventDefault() : undefined}
+                      className="inline-flex items-center justify-center space-x-3 px-6 py-3.5 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.24em] uppercase transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      <span>VIEW ON GITHUB</span>
+                      <span>{project.githubUrl === '#' ? 'COMING SOON' : 'VIEW ON GITHUB'}</span>
                       <span className="text-xs">↗</span>
                     </a>
                   </div>
