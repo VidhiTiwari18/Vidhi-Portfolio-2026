@@ -148,7 +148,7 @@ export const AboutSection: React.FC = () => {
           className="flex items-center space-x-4 mb-10"
         >
           <span
-            className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
+            className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#C6A76A]"
             style={{
               fontFamily: "'Montserrat', sans-serif",
             }}
@@ -230,28 +230,6 @@ export const AboutSection: React.FC = () => {
             </motion.p>
 
             {/* =================================================
-                RESUME DOWNLOAD
-            ================================================= */}
-
-            <motion.div
-              variants={fadeUpVariants}
-              className="mb-5"
-            >
-              <a
-                href="/Vidhi_resumeportfolio.zip"
-                download="Vidhi_resumeportfolio.zip"
-                className="inline-flex items-center gap-3 border border-[#D4AF37]/45 bg-[#0D0B09]/70 px-5 py-3 text-[9px] font-semibold tracking-[0.22em] uppercase text-[#F4EBE2] transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37] hover:bg-[#15110C] hover:text-[#F3DBB3] hover:shadow-[0_8px_25px_rgba(212,175,55,0.14)]"
-                style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                }}
-              >
-                <span>DOWNLOAD RESUME</span>
-                <span className="text-[#D4AF37]">↗</span>
-              </a>
-            </motion.div>
-
-
-            {/* =================================================
                 BEYOND CODE
             ================================================= */}
 
@@ -311,7 +289,7 @@ export const AboutSection: React.FC = () => {
                   </span>
 
                   <span
-                    className="relative block text-[2.7rem] sm:text-[3rem] leading-none text-[#D4AF37]"
+                    className="relative block min-h-[52px] text-[1.65rem] sm:text-[1.8rem] leading-[0.95] text-[#C6A76A] flex items-start"
                     style={{
                       fontFamily: "'Bebas Neue', sans-serif",
                     }}
@@ -351,7 +329,7 @@ export const AboutSection: React.FC = () => {
                   </span>
 
                   <span
-                    className="relative block text-[2.35rem] sm:text-[2.65rem] leading-[0.9] text-[#F4EBE2]"
+                    className="relative block min-h-[52px] text-[1.65rem] sm:text-[1.8rem] leading-[0.95] text-[#C6A76A] flex items-start"
                     style={{
                       fontFamily: "'Bebas Neue', sans-serif",
                     }}
@@ -359,7 +337,7 @@ export const AboutSection: React.FC = () => {
                     AI + WEB
                   </span>
 
-                  <span className="relative block mt-4 text-[10px] font-semibold tracking-[0.18em] uppercase text-[#D4AF37]">
+                  <span className="relative block mt-4 text-[9px] font-semibold tracking-[0.16em] uppercase text-[#C6A76A]">
                     Core Focus
                   </span>
 
@@ -390,25 +368,27 @@ export const AboutSection: React.FC = () => {
                     03
                   </span>
 
-                  <span
-                    className="relative block text-[1.8rem] sm:text-[2rem] leading-[0.9] text-[#D4AF37]"
-                    style={{
-                      fontFamily: "'Bebas Neue', sans-serif",
-                    }}
-                  >
-                    NATIONAL
-                  </span>
+                  <div className="relative min-h-[78px]">
+                    <span
+                      className="block text-[1.65rem] sm:text-[1.8rem] leading-[0.95] text-[#C6A76A]"
+                      style={{
+                        fontFamily: "'Bebas Neue', sans-serif",
+                      }}
+                    >
+                      NATIONAL
+                    </span>
 
-                  <span
-                    className="relative block mt-1 text-[1.55rem] sm:text-[1.75rem] leading-[0.9] text-[#F4EBE2]"
-                    style={{
-                      fontFamily: "'Bebas Neue', sans-serif",
-                    }}
-                  >
-                    LEVEL ATHLETE
-                  </span>
+                    <span
+                      className="block text-[1.65rem] sm:text-[1.8rem] leading-[0.95] text-[#C6A76A]"
+                      style={{
+                        fontFamily: "'Bebas Neue', sans-serif",
+                      }}
+                    >
+                      LEVEL ATHLETE
+                    </span>
+                  </div>
 
-                  <span className="relative block mt-4 text-[10px] font-semibold tracking-[0.18em] uppercase text-[#D4AF37]">
+                  <span className="relative block mt-4 text-[9px] font-semibold tracking-[0.16em] uppercase text-[#C6A76A]">
                     Achievement
                   </span>
 
@@ -440,7 +420,7 @@ export const AboutSection: React.FC = () => {
                   </span>
 
                   <span
-                    className="relative block text-[1.9rem] sm:text-[2.15rem] leading-[0.9] text-[#D4AF37]"
+                    className="relative block min-h-[52px] text-[1.65rem] sm:text-[1.8rem] leading-[0.95] text-[#C6A76A] flex items-start"
                     style={{
                       fontFamily: "'Bebas Neue', sans-serif",
                     }}

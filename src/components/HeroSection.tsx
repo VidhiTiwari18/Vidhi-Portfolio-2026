@@ -234,9 +234,8 @@ export const HeroSection: React.FC = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/Vidhi_resumeportfolio.zip"
+                download="Vidhi_resumeportfolio.zip"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 whileHover={{ scale: 1.02 }}
