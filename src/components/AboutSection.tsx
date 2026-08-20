@@ -229,6 +229,27 @@ export const AboutSection: React.FC = () => {
               useful, scalable, and built to make an impact.
             </motion.p>
 
+            {/* =================================================
+                RESUME DOWNLOAD
+            ================================================= */}
+
+            <motion.div
+              variants={fadeUpVariants}
+              className="mb-5"
+            >
+              <a
+                href="/Vidhi_resumeportfolio.zip"
+                download="Vidhi_resumeportfolio.zip"
+                className="inline-flex items-center gap-3 border border-[#D4AF37]/45 bg-[#0D0B09]/70 px-5 py-3 text-[9px] font-semibold tracking-[0.22em] uppercase text-[#F4EBE2] transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37] hover:bg-[#15110C] hover:text-[#F3DBB3] hover:shadow-[0_8px_25px_rgba(212,175,55,0.14)]"
+                style={{
+                  fontFamily: "'Montserrat', sans-serif",
+                }}
+              >
+                <span>DOWNLOAD RESUME</span>
+                <span className="text-[#D4AF37]">↗</span>
+              </a>
+            </motion.div>
+
 
             {/* =================================================
                 BEYOND CODE
