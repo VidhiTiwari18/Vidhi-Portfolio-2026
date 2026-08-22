@@ -19,7 +19,7 @@ const projects: Project[] = [
     category: 'AI CONVERSATION CONTINUITY / FULL STACK',
     description:
       'A full-stack SaaS platform with a Chrome extension that captures, summarizes, and transfers conversation context across AI chatbots such as ChatGPT, Claude, and Gemini — eliminating repetitive copy-pasting when switching between LLM platforms.',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/VidhiTiwari18/PromptBridge',
     tech: [
       'React',
       'Node.js',
@@ -83,7 +83,7 @@ const projects: Project[] = [
     category: 'COMPUTER VISION / IMAGE CLASSIFICATION',
     description:
       'A computer vision model trained on approximately 1,000 labeled vehicle images to classify vehicles into accident and non-accident categories. The project uses a CNN-based image classification approach to identify accident-related vehicle conditions.',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/VidhiTiwari18/Vehicle-Detection-Model',
     tech: [
       'Python',
       'TensorFlow',
@@ -191,7 +191,7 @@ export const ProjectsSection: React.FC = () => {
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
                   
-                  {/* Left Column (7 Cols) */}
+                  {/* Left Column */}
                   <div className="lg:col-span-7 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-4">
@@ -232,7 +232,7 @@ export const ProjectsSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Right Column (5 Cols) */}
+                  {/* Right Column */}
                   <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6 lg:pl-6 lg:border-l lg:border-[#8C6D4F]/25">
                     <div className="space-y-3">
                       <span className="text-[9.5px] font-mono tracking-[0.25em] uppercase text-[#8C6D4F] block mb-2">
