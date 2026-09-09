@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import ScrollStack, { ScrollStackItem } from './ScrollStack';
 
 interface Project {
-  number: string;
   title: string;
   category: string;
   description: string;
@@ -14,7 +13,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    number: '01',
     title: 'PromptBridge',
     category: 'AI CONVERSATION CONTINUITY / FULL STACK',
     description:
@@ -34,29 +32,31 @@ const projects: Project[] = [
       { label: 'STACK', value: 'React + Node + PostgreSQL' },
     ],
   },
+
   {
-    number: '02',
     title: 'NagrikAI',
     category: 'AI + FULL STACK / BUREAUCRACY ASSISTANT',
     description:
-      'A full-stack AI platform that helps citizens navigate government procedures, understand documentation requirements, and get step-by-step assistance for services such as passports and certificates. It also uses OCR and AI-powered document understanding to process uploaded documents.',
-    githubUrl: 'https://github.com/VidhiTiwari18/NagrikAI-AI-Powered-Bureaucracy-Assistant',
+      'NagrikAI is an AI-powered bureaucracy assistant designed to simplify citizen–government interactions by making government documents easier to understand, process, and manage. The system uses OCR and Gemini Vision with LLMs to identify different types of documents, extract important information into structured JSON, and validate the extracted data. It is designed to further use RAG and a government knowledge base to provide reliable guidance about government services and procedures, while future modules can support application tracking, workflow automation, notifications, and multilingual assistance. The overall goal is to reduce manual effort and confusion in bureaucratic processes and make them faster, more transparent, and citizen-friendly.',
+    githubUrl:
+      'https://github.com/VidhiTiwari18/NagrikAI-AI-Powered-Bureaucracy-Assistant',
     tech: [
       'React',
       'Python',
       'FastAPI',
       'EasyOCR',
-      'Gemini AI',
+      'Gemini Vision',
+      'LLMs',
       'REST APIs',
     ],
     metrics: [
       { label: 'ASSISTANCE', value: 'Government Procedures' },
       { label: 'DOCUMENT AI', value: 'OCR + Extraction' },
-      { label: 'FULL STACK', value: 'React + FastAPI' },
+      { label: 'AI ENGINE', value: 'Gemini Vision + LLMs' },
     ],
   },
+
   {
-    number: '03',
     title: 'Drone IVM',
     category: 'CUSTOM-BUILT DRONE + COMPUTER VISION',
     description:
@@ -77,8 +77,8 @@ const projects: Project[] = [
       { label: 'VISION', value: 'YOLOv5 + OpenCV' },
     ],
   },
+
   {
-    number: '04',
     title: 'Vehicle Accident Detection',
     category: 'COMPUTER VISION / IMAGE CLASSIFICATION',
     description:
@@ -110,7 +110,7 @@ export const ProjectsSection: React.FC = () => {
       <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-[#8C6D4F]/5 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        
+
         {/* Eyebrow Header */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -125,6 +125,7 @@ export const ProjectsSection: React.FC = () => {
           >
             02 / FEATURED WORK
           </span>
+
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
 
@@ -143,6 +144,7 @@ export const ProjectsSection: React.FC = () => {
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
               SELECTED WORKS.
             </span>
+
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
               ENGINEERED VALUE.
             </span>
@@ -152,57 +154,52 @@ export const ProjectsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#A8988B] max-w-sm mt-4 md:mt-0 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Four selected builds spanning AI, full-stack engineering, browser extensions, and computer vision.
+            Four selected builds spanning AI, full-stack engineering, browser
+            extensions, and computer vision.
           </p>
         </motion.div>
 
         {/* React Bits Stacking Deck */}
-        {/* React Bits Stacking Deck */}
-<ScrollStack
-  itemDistance={20}
-  itemScale={0.035}
-  itemStackDistance={28}
-  stackPosition="15%"
-  scaleEndPosition="6%"
-  baseScale={0.88}
-  useWindowScroll={true}
->
+        <ScrollStack
+          itemDistance={20}
+          itemScale={0.035}
+          itemStackDistance={28}
+          stackPosition="15%"
+          scaleEndPosition="6%"
+          baseScale={0.88}
+          useWindowScroll={true}
+        >
           {projects.map((project) => (
             <ScrollStackItem key={project.title}>
               <div className="relative w-full rounded-2xl border border-[#8C6D4F]/50 bg-[#0E0C0A] p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.98)] group overflow-hidden transition-colors duration-300 hover:border-[#D4AF37]">
-                
+
                 {/* Top Gold Border Light Flare */}
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/80 to-transparent" />
 
                 {/* Corner Minimal L-Brackets */}
                 <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
 
-                {/* Big Background Watermark Number */}
-                <span
-                  className="absolute -bottom-6 -right-3 text-8xl sm:text-9xl font-bold text-[#EAD8C7]/5 select-none pointer-events-none leading-none"
-                  style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-                >
-                  {project.number}
-                </span>
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
+
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
+
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]/60 group-hover:border-[#D4AF37] transition-colors" />
 
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-                  
+
                   {/* Left Column */}
                   <div className="lg:col-span-7 flex flex-col justify-between">
                     <div>
+
+                      {/* Project Category */}
                       <div className="flex items-center space-x-3 mb-4">
-                        <span className="text-xs font-mono font-bold text-[#D4AF37]">
-                          {project.number} //
-                        </span>
                         <span className="text-[10.5px] font-mono tracking-[0.25em] uppercase text-[#A8988B]">
                           {project.category}
                         </span>
                       </div>
 
+                      {/* Project Title */}
                       <h3
                         className="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-4 group-hover:text-[#F7E7C4] transition-colors uppercase leading-[0.9]"
                         style={{ fontFamily: "'Bebas Neue', sans-serif" }}
@@ -210,6 +207,7 @@ export const ProjectsSection: React.FC = () => {
                         {project.title}
                       </h3>
 
+                      {/* Project Description */}
                       <p
                         className="text-xs sm:text-sm md:text-[14px] font-light text-[#BDB0A4] leading-[1.85] tracking-wide mb-8 max-w-2xl"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
@@ -234,10 +232,12 @@ export const ProjectsSection: React.FC = () => {
 
                   {/* Right Column */}
                   <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6 lg:pl-6 lg:border-l lg:border-[#8C6D4F]/25">
+
                     <div className="space-y-3">
                       <span className="text-[9.5px] font-mono tracking-[0.25em] uppercase text-[#8C6D4F] block mb-2">
                         // ARCHITECTURE METRICS
                       </span>
+
                       {project.metrics.map((m) => (
                         <div
                           key={m.label}
@@ -246,6 +246,7 @@ export const ProjectsSection: React.FC = () => {
                           <span className="text-[10px] font-mono text-[#A8988B]">
                             {m.label}
                           </span>
+
                           <span className="text-[11px] font-mono font-medium text-[#F7E7C4]">
                             {m.value}
                           </span>
@@ -253,25 +254,23 @@ export const ProjectsSection: React.FC = () => {
                       ))}
                     </div>
 
+                    {/* GitHub Button */}
                     <a
-                      href={project.githubUrl === "#" ? undefined : project.githubUrl}
-                      target={project.githubUrl === "#" ? undefined : "_blank"}
-                      rel={project.githubUrl === "#" ? undefined : "noopener noreferrer"}
-                      onClick={project.githubUrl === "#" ? (e) => e.preventDefault() : undefined}
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center space-x-3 px-6 py-3.5 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.24em] uppercase transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      <span>{project.githubUrl === '#' ? 'COMING SOON' : 'VIEW ON GITHUB'}</span>
+                      <span>VIEW ON GITHUB</span>
                       <span className="text-xs">↗</span>
                     </a>
                   </div>
-
                 </div>
               </div>
             </ScrollStackItem>
           ))}
         </ScrollStack>
-
       </div>
     </section>
   );
